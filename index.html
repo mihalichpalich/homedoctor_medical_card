@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Медицинская карта</title>
+</head>
+<body>
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button
+                class="nav-link active"
+                id="diagnostic-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#diagnostic"
+                type="button"
+                role="tab"
+                aria-controls="diagnostic"
+                aria-selected="true"
+            >Диагностика</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button
+                class="nav-link"
+                id="treatment-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#treatment"
+                type="button"
+                role="tab"
+                aria-controls="treatment"
+                aria-selected="false"
+            >Лечение</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button
+                class="nav-link"
+                id="event-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#event"
+                type="button" role="tab"
+                aria-controls="event"
+                aria-selected="false"
+            >Мероприятия</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button
+                    class="nav-link"
+                    id="analyzes-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#analyzes"
+                    type="button" role="tab"
+                    aria-controls="analyzes"
+                    aria-selected="false"
+            >Анализы</button>
+        </li>
+    </ul>
+    <div class="tab-content h-75" id="myTabContent">
+        <fieldset class="reset-this redo-fieldset">
+            <legend class="reset-this redo-legend">Фильтр</legend>
+            <div class="d-flex flex-row">
+                <div class="form-group col-12">
+                    <div class="d-flex flex-row">
+                        <div class="col-1 d-flex flex-row align-items-center">
+                            <label>С</label>
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>. .</option>
+                            </select>
+                        </div>
+                        <div class="col-1 d-flex flex-row align-items-center">
+                            <label>По</label>
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>. .</option>
+                            </select>
+                        </div>
+                        <div class="col-1 d-flex flex-row align-items-center">
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>-</option>
+                            </select>
+                        </div>
+                        <div class="col-1 d-flex flex-row align-items-center">
+                            <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+                        </div>
+                        <div class="col-3 d-flex flex-row align-items-center">
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>ЛПУ</option>
+                            </select>
+                        </div>
+                        <div class="col-3 d-flex flex-row align-items-center">
+                            <label>Тип обращения:</label>
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>&lt;не выбрано&gt;</option>
+                            </select>
+                        </div>
+                        <div class="col-1 d-flex flex-row align-items-center justify-content-end">
+                            <button type="button" class="btn btn-light">Сбросить</button>
+                        </div>
+                        <div class="col-1 d-flex flex-row align-items-center justify-content-end">
+                            <button type="button" class="btn btn-light">Применить</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+        <div class="d-flex flex-row h-75 data-container">
+            <div class="col-6 bg-white border">
+                <table class="table table-bordered">
+                    <thead class="bg-secondary">
+                        <tr>
+                            <th scope="col" class="table-header">Назначено</th>
+                            <th scope="col" class="table-header">Тип</th>
+                            <th scope="col" class="table-header">Срочно</th>
+                            <th scope="col" class="table-header">Файлов</th>
+                            <th scope="col" class="table-header">Состояние</th>
+                            <th scope="col" class="table-header">План</th>
+                            <th scope="col" class="table-header">Начато</th>
+                            <th scope="col" class="table-header">Окончено</th>
+                            <th scope="col" class="table-header">Назначил</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+            <div class="col-6 bg-white border"></div>
+        </div>
+        <button type="button" class="btn btn-secondary print-button">
+            Печать <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
+        </button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+</body>
+</html>

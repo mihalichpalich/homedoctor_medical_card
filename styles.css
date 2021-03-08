@@ -1,0 +1,35 @@
+html {
+    overflow-x:hidden;
+}
+
+html, body {
+    height: 100%;
+}
+
+.reset-this {
+    all: initial;
+}
+
+.redo-fieldset {
+    width: 97.7%;
+    padding : 10px;
+    margin: 5px;
+    border: 1px solid black;
+}
+
+.redo-legend {
+    color: black;
+}
+
+.data-container {
+    margin: 0.3%;
+}
+
+.table-header {
+    font-size: 0.9rem;
+}
+
+.print-button {
+    margin-top: 5%;
+    margin-left: 0.3%;
+}
